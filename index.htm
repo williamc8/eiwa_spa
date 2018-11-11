@@ -1,153 +1,105 @@
 <!doctype html>  
-
-<html lang="en" class="no-js">  
+<html lang="en" class="no-js no-store">  
 <head>  
     <meta charset="utf-8">
-    <title>2018-2019 D1 College Wrestling</title>  
-    <link rel="stylesheet" type="text/css" href="css/wrestling_schedule.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script type="text/javascript">
+        document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/,'js');
+        if (typeof window.localStorage !== 'undefined') {
+            document.documentElement.className = 'js';
+        }
+    </script>
+    <title>2019 EIWA Pick 4 Contest</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/eiwa2019.css">
+    <!--[if lt IE 9]>  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>  
+    <![endif]-->
 </head>
 
 <body>
 
-<div id="wrapper">
+    <header id="javascriptWarning">
+        <p>You must enable JavaScript or this page won't work...</p>
+    </header>
 
-    <h1>2018&ndash;2019 D1 College Wrestling </h1>
+    <header id="storageWarning">
+        <p>You can't save picks to your computer using this browser.</p>
+    </header>
+   
+    <div id="wrapper">
+    
+        <header id="mainHeader">
+            <div id="pastYears">
+                <strong>Previous:</strong>  
+                <a class="ext" href="../../2015/eiwa/index.htm">2015</a> | 
+                <a class="ext" href="../../2014/layout.htm">2014</a> | 
+                <a class="ext" href="http://www.williamc.com/doc/eiwa2013Pick4.php">2013</a> | 
+                <a class="ext" href="http://www.williamc.com/doc/eiwa2012Pick4.php">2012</a>
+            </div>
+            <h1>2019 EIWA Pick 4 <span>Contest</span></h1>
+            <a href="https://bubearcats.com/index.aspx?path=wrestling" target="_blank">
+                <div id="logo" title="Go to the Binghamton EIWA site" class="ext"></div>
+            </a>
+            <h2>Seawolf Rules</h2>
+            <div id="rules">
+                <p id="rulesIntro">Predict the top 4 placewinners for the 2019 EIWA tournament:</p>
+                <ul>
+                    <li><em class="noted">1 point</em> for each place winner picked</li>
+                    <li><em class="noted">2 bonus points</em> for each exact placement</li>
+                    <li><em class="noted">4 bonus points</em> for picking a wrestler not seeded in the top 6.</li>
+                </ul>
+            </div>
+            <nav id="eiwaSchools">
+                <h4>EIWA Rosters <i class="fas fa-external-link-alt"></i></h4>
+                <ul>
+                    <li><a href="http://www.aueagles.com/sports/m-wrestl/2018-19/roster" target="_blank">American</a></li>
+                    <li><a href="https://goarmywestpoint.com/roster.aspx?path=wrestling" target="_blank">Army</a></li>
+                    <li><a href="https://bubearcats.com/roster.aspx?path=wrestling" target="_blank">Binghamton</a></li>
+                    <li><a href="https://brownbears.com/roster.aspx?path=wrestling" target="_blank">Brown</a></li>
+                    <li><a href="https://bucknellbison.com/roster.aspx?path=wrestling" target="_blank">Bucknell</a></li>
+                    <li><a href="https://gocolumbialions.com/roster.aspx?roster=366&path=wrestling" target="_blank">Columbia</a></li>
+                    <li><a href="https://cornellbigred.com/roster.aspx?path=wrest&" target="_blank">Cornell</a></li>
+                    <li><a href="" target="_blank"></a>Drexel</li>
+                    <li><a href="" target="_blank"></a>F & M</li>
+                    <li><a href="" target="_blank"></a>Harvard</li>
+                    <li><a href="" target="_blank"></a>Hofstra</li>
+                    <li><a href="https://lehighsports.com/roster.aspx?path=wrestling" target="_blank">Lehigh</a></li>
+                    <li><a href="" target="_blank"></a>Navy</li>
+                    <li><a href="" target="_blank"></a>Penn</li>
+                    <li><a href="https://goprincetontigers.com/roster.aspx?roster=2484&path=wrestling" target="_blank">Princeton</a></li>
+                    <li class="last"><a href="http://www.sacredheartpioneers.com/sports/m-wrestl/2018-19/roster" target="_blank">Sacred Heart</a></li>
+                </ul>
+            </nav>
+        </header>    
+        
+        <p class="navWeightsInfo">Click weight to show/hide. Click <span>All</span> to show all. Click <span>None</span> to hide all.</p>
+        <ul id="navWeights" class="clearfix">
+            <li title="Show/Hide 125 lbs" class="sel">125</li>
+            <li title="Show/Hide 133 lbs">133</li>
+            <li title="Show/Hide 141 lbs">141</li>
+            <li title="Show/Hide 149 lbs">149</li>
+            <li title="Show/Hide 157 lbs">157</li>
+            <li title="Show/Hide 165 lbs">165</li>
+            <li title="Show/Hide 174 lbs">174</li>
+            <li title="Show/Hide 184 lbs">184</li>
+            <li title="Show/Hide 197 lbs">197</li>
+            <li title="Show/Hide 285 lbs">285</li>
+            <li id="selectAll" title="Show All Weight Classes">All</li>
+            <li id="selectNone" title="Hide All Weight Classes">None</li>
+        </ul>       
+        
+        <div id="allWeights" class="clearfix"></div>
 
-    <div id="lastMod"><strong>Ver:</strong>&nbsp;10/16/2018</div>
-    
-    <div id="topLinks">
-    
-        <h2><img src="../../img/btn/clr10x2minus.png" class="clrButton" alt="Toggle the links">Wrestling Sites</h2>
-    
-        <div class="topic">
-            <h3>General</h3>
-            <ul>
-                <!--li><a href="http://www.amateurwrestlingphotos.com">Amateur Wrestling Photos</a></li-->
-                <li><a href="http://www.associatedwrestlingpress.com/">Associated Wrestling Press</a></li>
-                <li><a href="http://www.blackshoediaries.com/penn-state-wrestling">Black Shoe Diaries</a></li>
-                <li><a href="http://www.wrestlingstats.com">Boomer's Wrestling Stats</a></li>
-                <li><a href="http://www.d1collegewrestling.net/">D1 College Wrestling</a></li>
-                <li><a href="http://postedresults.escapesports.com/">Escape Sports (results)</a></li>
-                <li><a href="http://www.flowrestling.com">FloWrestling</a></li>
-                <li><a href="http://www.intermatwrestle.com">Intermat</a></li>
-                <li><a href="http://newyorkwrestlingnews.com/">New York Wrestling News</a></li>
-                <!--li><a href="http://www.nwcaonline.com/nwcaonline/results/ColScorebook/WrestlerStatReports.aspx">NWCA Org Stat Tracker</a></li-->
-                <li><a href="http://theopenmat.com">The Open Mat</a></li>
-                <li><a href="http://www.pa-wrestling.com/">PA Wrestling</a></li>
-                <li><a href="http://takedownwrestle.com/">Takedown Wrestling</a></li>
-                <li><a href="http://www.tournaflex.com/splat.asp?target=front.htm">Tournaflex</a></li>
-                <li><a href="http://www.trackwrestling.com">Track Wrestling</a></li>
-                <li><a href="https://unitedworldwrestling.org/">United World Wrestling</a></li>
-                <li><a href="http://www.teamusa.org/usa-wrestling/">USA Wrestling</a></li>
-                <li><a href="http://www.win-magazine.com/v2/">WIN Magazine</a></li>
-                <li><a href="http://www.wrestlestat.com/">WrestleStat</a></li>
-                <li>WR: <a href="http://wrestlingreport.com/current_news/viewforum.php?f=15">Lehigh</a> | <a href="http://wrestlingreport.com/current_news/viewforum.php?f=14">EIWA</a> | <a href="http://wrestlingreport.com/current_news/viewforum.php?f=50">Intl</a> | <a href="http://wrestlingreport.com/current_news/viewforum.php?f=28">Cornell</a></li>
-
-                <li><a href="http://www.wrestlingusa.com/">Wrestling USA Magazine</a></li>
-            </ul>
-        </div>
-
-        <div class="topic">            
-            <h3>Schools, Media and Test Pages</h3>
-            <ul>
-                <li><a href="http://www.lehighsports.com/index.aspx?path=wrestling&">Lehigh Wrestling</a></li>
-                <li><a href="http://www.watchstadium.com/network/patriot-league-network/">PLN</a></li>
-                <li><a href="https://twitter.com/LehighWrestling">Lehigh Wrestling on Twitter</a></li>
-                <!--li ><a href="https://groups.yahoo.com/neo/groups/LEHIGH-Wrestling/info">Lehigh Wrestling group on Yahoo</a></li-->
-                <li><a href="http://www.thebrownandwhite.com/">Brown and White / Lehigh Valley Live</a></li>
-                <li><a href="http://www.wlvr.org/">WLVR</a></li>
-                <li><a href="http://www.mcall.com/sports/varsity/">Morning Call</a></li>
-                <li><a href="http://www.eiwawrestling.org/">EIWA Website</a></li>
-                <li><a href="http://gocrimson.com/sports/wrest/index">Harvard</a></li>
-                <li><a href="http://thecrimson.com/tag/Wrestling/">Harvard Crimson</a></li>                
-                <li><a href="https://brownbears.com/index.aspx?path=wrestling">Brown</a></li>
-                <li><a href="http://cornellbigred.com/schedule.aspx?path=wrest&amp;">Cornell</a></li>
-                <!-- >li><a href="http://williamc.com/doc/wrestling/wrestling_matchup.php">Match-ups template</a>  | <a href="../2015/matchup.htm">new (wip)</a></li-->
-                <li><a href="../2015/eiwa/index.htm">2015 EIWA Pick 4 Contest</a></li>
-                <li><a href="eiwa/index.htm">2019 EIWA Pick 4 Contest</a></li>
-            </ul>
-        </div>
-    
     </div>
     
-    <p class="superClear">.</p>
-        
-    <div id="schedules">
-        
-        <h2><img src="../../img/btn/clr10x2plus.png" class="clrButton" alt="Toggle the links">Selected Schedules</h2>
-        
-        <div class="topic startHidden">
-            <ul>
-                <li><a href="https://goarmywestpoint.com/index.aspx?path=wrestling">Army</a></li>
-                <li><a href="https://bubearcats.com/index.aspx?path=wrestling">Binghamton</a></li>
-                <li><a href="http://www.gocolumbialions.com/SportSelect.dbml?DB_OEM_ID=9600&amp;SPID=3876&amp;SPSID=43591">Columbia</a></li>
-            </ul>
-        </div>
-
-        <div class="topic startHidden">
-            <ul>
-                <li></li>
-            </ul>
-        </div>
-
-        <p class="superClear">.</p>
+    <div id="horiz-1"></div>
     
-    </div>
-        
-    <p id="rankings">NCAA D1 Rankings: 
-        <a class="ext" href="http://www.themat.com/section.php?section_id=5&page=college_d1">TheMat.com</a> | 
-        <a class="ext" href="http://www.ncaa.com/content/di-wrestling-coaches-panel-rankings">Coaches Ranking</a>
-    </p>
-       
-</div>
-
-<script>
-(function(global) {
-    var BLOCK = 'block',
-        NONE = 'none',
-        bdy = document.getElementsByTagName('body')[0],
-        lnks = document.getElementsByTagName('a'),
-        btn = document.getElementsByClassName('clrButton'),                         // the toggle buttons
-        topL = document.getElementById('topLinks').getElementsByTagName('div'),     // 2 floating divs
-        schL = document.getElementById('schedules').getElementsByTagName('div'),    // 2 floating divs
-        init = function() {
-            var i = 0,
-                len = lnks.length;
-            for(; i < len; i++) {
-                if (lnks[i].href.match(/http/)) {
-                    lnks[i].setAttribute('target', '_blank');
-                }           
-            }
-            for (i = 0, len = btn.length; i < len; i++) {
-                btn[i].addEventListener('click', function() {
-                    var sDivs;
-                    if (this === btn[0]) {
-                        sDivs = topL;
-                    } else if (this === btn[1]) {
-                        sDivs = schL;
-                    }
-                    if (sDivs[0].style.display != BLOCK) {
-                        sDivs[0].style.display = BLOCK;
-                        sDivs[1].style.display = BLOCK;
-                        this.src = "../../img/btn/clr10x2minus.png";
-                    } else {
-                        sDivs[0].style.display = NONE;
-                        sDivs[1].style.display = NONE;
-                        this.src = "../../img/btn/clr10x2plus.png";            
-                    }
-                }); 
-            }
-            // set the starting display styles explicitly
-            for (i = 0; i < topL.length; i++) {
-                topL[i].style.display = BLOCK;
-            }
-            for (i = 0; i < schL.length; i++) {
-                schL[i].style.display = NONE;
-            }
-        };
-    bdy.addEventListener('load', init());
-})(this);
-</script>
+    <script src="js/utility.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/entries.js"></script>
+    <script src="js/eiwa2019.js"></script> 
 
 </body>
 
