@@ -1,0 +1,739 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background-color: lightgreen;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: lightgreen;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+
+   started with eiwa.css from 2015
+
+    COLORS
+    off-white               see wrapper
+    Bing dark green         #054536
+    selected:               #ccc
+
+    TO DO:
+    - rgba -> rgb
+==========================================================================*/
+
+body {
+    background-color: #054536;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+#wrapper, #javascriptWarning, #storageWarning  {
+    position: relative;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 1rem auto;
+    background: #fafffe;
+    border: 2px solid #060;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px black;
+}
+
+/* if wrapper is off-white, make these white */
+#navWeights li, .weight ul, ta {
+    background: white;
+}
+
+.no-js #javascriptWarning, .no-store #storageWarning {
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    background: lightgreen;
+    color: black;
+    padding: 0 20px;
+}
+
+.js #javascriptWarning, #storageWarning  {
+    display: none;
+}
+
+.no-store #storageWarning {
+    display: block;
+}
+
+/* don't display the no storage warning if already warning about no js
+ * and hide storage-related items (buttons) if no store 
+ */
+.no-js #storageWarning, .no-store .storage {
+    display: none;
+}
+
+#mainHeader {
+    position: relative;
+    padding-bottom: 4px;
+}
+
+#pastYears {
+    position: absolute;
+    top: -13px;
+    right: 0;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+#pastYears a {
+    color:#054536;
+}
+
+#pastYears a:hover {
+    border-bottom:1px solid #054536;
+}
+
+#logo {
+    position: absolute;
+    top: 13px;
+    right: 0;
+    width: 269px;
+    height: 155px;
+    background: url(../img/bearcat.png) no-repeat;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+#eiwaSchools {
+    position: absolute;
+    top: 160px;
+    right: 0;
+    width: 140px;
+    height: 200px;
+}
+
+#eiwaSchools h4 {
+    margin: 0;
+    margin-top: 1rem;
+    text-align: center;
+    color: gray;
+    background: white;
+}
+
+#eiwaSchools:hover {
+    cursor: pointer;
+}
+
+#eiwaSchools ul {
+    display: none;
+    border: 1px solid gray;
+    border-radius: 4px;
+    color: gray;
+    background: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#eiwaSchools:hover ul {
+    display: block;
+}
+
+#eiwaSchools li {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid gray;
+    text-align: center;
+}
+
+#eiwaSchools ul li:hover {
+    background: #eee;
+}
+
+#eiwaSchools li.last {
+    border-bottom: none;
+}
+
+#eiwaSchools a {
+    color: gray;
+    font-weight: normal;
+}
+
+/* CONTROL BAR and each weight's top row spans background colors
+**************************************************************************/
+.navWeightsInfo {
+    margin: 0;
+    margin-bottom: 8px;
+    font-style: italic;
+    font-size: 0.875rem;
+    line-height: 1.2;
+    color: #666;
+}
+
+.navWeightsInfo span {
+    font-weight: bold;
+    color: black;
+}
+
+#navWeights {
+    margin: 2px 0 10px 0;
+    padding: 0;
+}
+
+#navWeights li {
+    list-style-type: none;
+    display: inline;
+    float: left;
+    margin: 0;
+    padding: 4px 10px 0 10px;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 20px;
+    border: 2px solid black;
+    margin-top: -2px;
+    margin-left: -2px;
+}
+
+/* color for selected weights, picked wrestler rows, ordinal button hover, buttons */
+#navWeights li.sel, #navWeights li:hover, #navWeights li.sel:hover,
+.weight h2 span:hover, .wrestler li.sel, li.ord span:hover, #contestant:focus, button {
+    background: rgb(235, 235, 235);
+}
+
+/* accent color for nav weight select hover */
+#navWeights li:hover {
+    background: rgb(235, 247, 235);
+}
+
+#navWeights li:hover {
+    cursor:pointer;
+}
+
+#navWeights li#selectAll, #navWeights li#selectNone,
+.weight h2 span {
+    background-color: #006;
+    background-image: linear-gradient(#090, #003);
+    color: white;
+}
+
+.weight h2 span.closeWeight {
+/*     background-color: red;
+    background-image: linear-gradient(red, #600); */
+    background: none;
+    color: gray;
+}
+
+#navWeights li#selectAll:hover, #navWeights li#selectNone:hover,
+.weight h2 span:hover {
+    background: black;
+    color: white;
+}
+
+.weight h2 span.closeWeight:hover {
+    background: rgb(235, 235, 235);
+    color: gray;
+}
+
+/*  SHOW WEIGHT
+**********************************************************/
+
+.weight {  
+    float: left;
+    padding: 0 4px;
+    margin: 6px 10px 6px 0;
+    min-width: 242px;
+    display: none;
+}
+
+.weight.disp {
+    display: block;
+}
+
+.weight h2 {
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 4px;
+}
+
+/* See above: Prev|Next button colors are the same as
+ the All|None button colors in navWeights */
+.weight h2 span {
+    padding: 0 8px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    margin: 0 16px;
+}
+
+.weight h2 span:hover {
+    cursor: pointer;
+}
+
+/*  MAKE PICKS
+**********************************************************/
+
+/* hot color for selecting/picking */
+li.ord span.picking {
+    background: yellow;
+}
+
+.weight.picking {
+    box-shadow: 4px 4px 4px gray;
+}
+
+/* need to get rid of bg on 1st. row */
+.weight.picking li:hover {
+    cursor: cell;
+    background: #ffffe7;
+}
+
+.wrestler {   /* UL */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.wrestler li {
+    border-bottom: 1px solid gray;
+    margin: 0;
+    padding: 3px 6px 0 6px;
+    height: 24px;
+    line-height: 24px;
+}
+
+.wrestler li.last {
+    border-bottom: 0;
+}
+
+li.instr {
+    padding-top: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    height: 36px;
+    font-style: italic;
+    border-bottom: none;
+}
+
+li.ord {
+    height: 28px;
+}
+
+li.ord span {
+    text-align: center;
+    border: 1px solid black;
+    padding: 6px 10px 3px 10px;
+    margin: 0 4px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+li.ord span:hover {
+    box-shadow: 2px 2px 2px gray;
+    cursor: pointer;
+}
+
+.wrestler li span {
+    font-weight: bold;
+}
+
+.rank {
+    margin-right: 5px;
+}
+
+/*  OUTPUT AREA
+**********************************************************/
+#output {
+    padding-top: 9px;
+    float: left;
+    margin-left: 3px;
+}
+
+#contestant {
+    width: 20em;
+}
+
+input {
+    margin: 3px 6px 3px 0;
+    padding: 2px 0 0 3px;
+}
+
+label {
+    font-size: 15px;
+}
+
+button {
+    float: left;
+    margin: 3px 6px 3px 0;
+    padding: 0 .5rem;
+    height: 2rem;
+    font-size: 1rem;
+    line-height: 2.0;
+    border-radius: 3px;
+}
+
+button:disabled {
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+button.newRow {
+    clear: left;
+}
+
+#output div {
+    float: left;
+    clear: both;
+    margin: 8px 0 0 0;
+}
+
+#output select {
+    margin-left: 6px;
+}
+
+textarea {
+    margin-top: 5px;
+    outline: none;
+    padding: 5px;
+    padding-top: 10px;
+    width: 94%;
+    max-width: 480px;
+    font-size: 14px;
+}
+
+/*  OTHER HTML & MISC
+**********************************************************/
+i {
+    margin-right: .3em;
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0;
+    padding-top: 6px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+ul {
+    margin: 0 0 10px 20px;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+label {
+    font-weight: bold;
+}
+
+em.noted {
+    font-weight: bold;
+}
+
+/* debug */
+#horiz-1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: red;
+    top: 301px;
+    display: none;
+}
+
+.dev {
+    display: none;
+    font-size: smaller;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-width:800px) {   
+    #rulesIntro {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    button {
+        clear: left;
+    }
+    h1 span {
+        display: none;
+    }
+    #logo {
+        display: none;   
+    }
+    #eiwaSchools {
+        top: 0;
+    }
+    #rulesIntro {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #eiwaSchools {
+        display: none;
+    }
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
