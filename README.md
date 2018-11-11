@@ -1,2 +1,2 @@
 # eiwa_spa
-EIWA Pick 4 Contest
+Code for the EIWA Pick 4 Contest.
