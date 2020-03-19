@@ -1,2 +1,2 @@
 # eiwa_spa
-Code for the EIWA Pick 4 Contest.
+Code for the 2019 EIWA Pick 4 Contest.
